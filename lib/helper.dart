@@ -46,8 +46,8 @@ Future<Map> getUserInfo(uid) async { // get user info from server function
   res = await dio.get("$API_BASE/$uid/login"); // send get request to server to retrieve user details.
   return res.data;
 }
-
-class Todo { // create todo class for storing general data
+// create todo class for storing general data
+class Todo {
   String title;
   String description;
   String date;
