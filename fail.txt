@@ -1,0 +1,43 @@
+00:00 +0: loading /Users/sammyhass/Documents/Projects/Todo/todo_app/test/widget_test.dart                                                                                                              00:01 +0: loading /Users/sammyhass/Documents/Projects/Todo/todo_app/test/widget_test.dart                                                                                                              00:01 +0: Counter increments smoke test                                                                                                                                                                00:02 +0: Counter increments smoke test                                                                                                                                                                00:02 +0: Counter increments smoke test                                                                                                                                                                
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure object was thrown running a test:
+  Expected: exactly one matching node in the widget tree
+  Actual: ?:<zero widgets with text "0" (ignoring offstage widgets)>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///Users/sammyhass/Documents/Projects/Todo/todo_app/test/widget_test.dart:19:5)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:72:23)
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:566:19)
+<asynchronous suspension>
+#9      TestWidgetsFlutterBinding._runTest (package:flutter_test/src/binding.dart:550:14)
+#10     AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:893:24)
+#16     AutomatedTestWidgetsFlutterBinding.runTest (package:flutter_test/src/binding.dart:890:15)
+#17     testWidgets.<anonymous closure> (package:flutter_test/src/widget_tester.dart:71:22)
+#18     Declarer.test.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:168:27)
+<asynchronous suspension>
+#19     Invoker.waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:249:15)
+<asynchronous suspension>
+#24     Invoker.waitForOutstandingCallbacks (package:test_api/src/backend/invoker.dart:246:5)
+#25     Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:166:33)
+#30     Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:165:13)
+<asynchronous suspension>
+#31     Invoker._onRun.<anonymous closure>.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:399:25)
+<asynchronous suspension>
+#45     _Timer._runTimers (dart:isolate/runtime/libtimer_impl.dart:382:19)
+#46     _Timer._handleMessage (dart:isolate/runtime/libtimer_impl.dart:416:5)
+#47     _RawReceivePortImpl._handleMessage (dart:isolate/runtime/libisolate_patch.dart:171:12)
+(elided 28 frames from class _FakeAsync, package dart:async, and package stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///Users/sammyhass/Documents/Projects/Todo/todo_app/test/widget_test.dart line 19
+
+The test description was:
+Counter increments smoke test
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:02 +0 -1: Counter increments smoke test [E]                                                                                                                                                         
+  Test failed. See exception logs above.
+  The test description was: Counter increments smoke test
+  
+00:02 +0 -1: Some tests failed.                                                                                                                                                                        

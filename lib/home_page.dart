@@ -4,7 +4,7 @@ import "auth.dart";
 import "helper.dart" as helper;
 import "create_todo_page.dart";
 import "view_todo_page.dart";
-
+import 'package:timeago/timeago.dart' as timeago;
 
 
 class HomePage extends StatefulWidget { // create stateful widget for home page. This is so that all new tasks can be stored.
@@ -15,62 +15,79 @@ class HomePage extends StatefulWidget { // create stateful widget for home page.
 	_HomePageState createState() => _HomePageState(); // load the initial state for this page 
 
 }
-	class _HomePageState extends State<HomePage> { // The initial state for this page.
-		List<Widget> getTasks() { // method to get and show all tasks.
-			List<Widget> widgets = []; // list that will hold all widgets generated within this function. will contain the tasks and list title.
-			Map lists = widget.auth.liveUser.lists; // get the lists from the user object.
-			lists.forEach((category, list) { // go through all lists
-				print(lists[category]);
-				widgets.add( // push the widget holding the category title to the widgets list.
-					Center(child: Text(
-						category,
-						style: TextStyle(
-								fontWeight: FontWeight.bold,),
-								textScaleFactor: 2,)
-					),
-				);
-				widgets.add( // add some vertical space to seperate out each element.
-					Container(padding: EdgeInsets.symmetric(vertical: 16))
-				);
-				for (int i = 0; i < lists[category].length; i++) { // iterate over each task in this list.
-					print(lists[category][i]["title"]);
-					Color priorityIconColour;
-					print(lists[category][i]["priority"]);
-					List<MaterialColor> iconColors = [Colors.green, Colors.amber, Colors.red];
-					priorityIconColour = iconColors[lists[category][i]["priority"]];
-					widgets.add( // add button with title of this task in colour dependent on priority level. Button link to view task page.
-							Container(
-								child:
-								FlatButton(
-										onPressed: ()  {
-											Navigator.push(
-												context,
-												MaterialPageRoute(builder: (context) => ViewTodoPage(auth: widget.auth, todoCat: category, todoId: widget.auth.liveUser.lists[category][i]["id"])),
-											);
-										},
-										splashColor: Colors.blue,
 
-										child: Center(
-											child: Row(
-												children: [
-													Icon(
-														Icons.priority_high,
-														color: priorityIconColour,
-													),
-													Text(
-														lists[category][i]["title"],
-														textScaleFactor: 1.2, style: TextStyle(color: Colors.black), textAlign: TextAlign.center,
-													),
-												]
-											),
-										),
-								),
-								width: double.infinity,
-							),
-					);
-				}
+	abstract class ListItem {} // The base class for the different types of items the List can contain
+
+// A ListItem that contains data to display a category
+	class Category implements ListItem { // Create list item
+		final String category;
+		Category(this.category);
+	}
+
+// A ListItem that contains data to display a Task
+class Task implements ListItem {
+		final String title;
+		final String id;
+		final int  priority;
+		final String category;
+		String till;
+		Task(this.title, this.till, this.id, this.priority, this.category);
+	}
+	class _HomePageState extends State<HomePage> { // The initial state for this page.
+		dynamic getTasks() { // method to get and show all tasks.
+			Map lists = widget.auth.liveUser.lists; // get the lists from the user object.
+			if (lists == null) {
+				lists = Map();
+			}
+			List<ListItem> items = []; // List for all widgets to build
+			lists.forEach((category, list) {
+				items.add(Category(category)); // Making the category into a widget
+				list.forEach((item) {
+					items.add(Task(item["title"], timeago.format(helper.dateFormatter.parse(item["date"]), allowFromNow: true), item["uid"], item["priority"], category));
+				});
+
 			});
-			return widgets; // return the list created containing widgets to add.
+
+
+
+			return new ListView.builder(
+				// Let the ListView know how many items it needs to build
+				itemCount: items.length,
+				// Provide a builder function. This is where the magic happens! We'll
+				// convert each item into a Widget based on the type of item it is.
+				itemBuilder: (context, index) {
+					final item = items[index];
+					if (item is Category) {
+						return ListTile(
+							title: new Text(
+								item.category,
+								style: Theme.of(context).textTheme.headline,
+							),
+						);
+					} else if (item is Task) {
+						return Card(
+							child: ListTile(
+							title: Text(
+								item.title,
+							),
+								subtitle: Text(
+										item.till
+								),
+								leading: Icon(
+									Icons.adjust,
+									color: [Colors.green, Colors.amber, Colors.red][item.priority],
+								),
+							onTap: () {
+								Navigator.push(context, MaterialPageRoute(
+										builder: (context) => ViewTodoPage(auth: widget.auth, todoCat: item.category, todoId: item.id)
+								));
+							},
+
+						)
+						);}
+				},
+			);
+
 		}
 		void _signOut() async { // sign out method, attached to button.
 			try {
@@ -85,19 +102,16 @@ class HomePage extends StatefulWidget { // create stateful widget for home page.
 		Widget build(BuildContext context) { // build the UI of page.
 			return new Scaffold(
 					appBar: new AppBar( // create top bar.
-						title: new Text("Welcome, ${widget.auth.liveUser.firstName}!", textAlign: TextAlign.left),
+						title: new Text("Welcome${widget.auth.liveUser.firstName != null ? " " + widget.auth.liveUser.firstName : ""}!", textAlign: TextAlign.left),
 						actions: <Widget>[
 							new RotatedBox(quarterTurns: 2, child: IconButton(onPressed: _signOut, icon: new Icon(Icons.exit_to_app)))
 						],
 					),
 					body: new Container( // build body of page.
 						padding: EdgeInsets.all(16.0),
-						child: new SingleChildScrollView(
-							child: new Column(
-								children: getTasks() // get all tasks from server.
-							)
+								child: getTasks() // get all tasks from server
 						),
-					),
+
 				floatingActionButton: FloatingActionButton( // create add task button.
 					onPressed: ()  {
 						Navigator.push(

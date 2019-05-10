@@ -9,13 +9,14 @@ class User { // create user class which will act as a temporary place to keep da
 		String email;
 		Map lists;
 
-		void update(helper.Todo todo) { // create update method, to add a task to the user object.
+		void update(helper.Todo todo, Function  after) { // create update method, to add a task to the user object.
 			lists[todo.category].add({ // add task to a particular list selected with NLP
 				"title": todo.title,
 				"description": todo.description,
 				"date": todo.date,
 				"priority": todo.priority,
 			});
+			after();
 		}
 
 }
@@ -55,15 +56,25 @@ class Auth implements BaseAuth { // create sub class, inherited from BaseAuth
 	}
 
 	Future<String> currentUser() async { // method to get current user data
+		try {
+			FirebaseUser user = await _firebaseAuth.currentUser(); // get the public data held by firebase about this user.
+			print(user);
+			if (user != null) {
+				Map loginReq = await helper.getUserInfo(user.uid); // get user data from server
+				// below is storing user data within liveUser object
+				liveUser.firstName = loginReq["firstName"];
+				liveUser.lastName = loginReq["lastName"];
+				liveUser.uid = user.uid;
+				liveUser.lists = loginReq["lists"];
+				return user.uid;
+			} else {
+				return null;
+			}
 
-		FirebaseUser user = await _firebaseAuth.currentUser(); // get the public data held by firebase about this user.
-		Map loginReq = await helper.getUserInfo(user.uid); // get user data from server
-		// below is storing user data within liveUser object
-		liveUser.firstName = loginReq["firstName"];
-		liveUser.lastName = loginReq["lastName"];
-		liveUser.uid = user.uid;
-		liveUser.lists = loginReq["lists"];
-		return user.uid;
+		} catch (e) {
+			return null;
+		}
+
 	}
 	Future<void> signOut() async { // method to sign out the user
 		return _firebaseAuth.signOut(); // use firebase to sign out.

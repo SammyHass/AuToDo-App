@@ -157,8 +157,7 @@ class _LoginPageState extends State<LoginPage> { // create the initial State for
           padding: EdgeInsets.all(16.0),
           child: new Form( // create the form
             key: formKey, // use form key declared above.
-            child: new Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+            child: new ListView(
               children: buildExtra() + buildInputs() + buildSubmitButtons(), // put the form together.
             )
           )

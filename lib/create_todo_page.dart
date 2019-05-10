@@ -4,8 +4,10 @@
 import "package:flutter/material.dart";
 import "auth.dart";
 import "home_page.dart";
-import 'package:intl/intl.dart';
 import "helper.dart";
+import 'package:flutter/services.dart';
+import 'package:timeago/timeago.dart' as timeago;
+
 
 // Creates Page as a Stateful Widget in order so that it can adapt to the users actions
 class CreateTodoPage extends StatefulWidget { 
@@ -17,8 +19,25 @@ class CreateTodoPage extends StatefulWidget {
 }
 
 class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state of the stateful widget declared above
-	DateTime _date = new DateTime.now().add(new Duration(hours: 24)); // Get current date and time
-	TimeOfDay _time = new TimeOfDay.now();
+	DateTime _selectedDate = DateTime.now().add(Duration(days: 1));
+	TimeOfDay _selectedTime = TimeOfDay.fromDateTime(DateTime.now().add(Duration(days: 1)));
+	static const platform = const MethodChannel('todo.sammyhass.io/ML');
+	String _category = "work";
+
+	Future<void> _getTaskPrediction(String title) async {
+		String category;
+		try {
+			category = await platform.invokeMethod("getTaskPrediction", <String, String>{"title": title});
+		} on PlatformException catch (e) {
+			category = category;
+			print("Could connect" + e.toString());
+		}
+
+		setState(() {
+			_category = category;
+		});
+	}
+
 	// private variables for form values to occupy.
 	int _priority = 0; 
 	String _title;
@@ -29,32 +48,28 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 			_priority = value;
 		});
 	}
-	Future<Null> _selectDate(BuildContext context) async { // method to build a date picker
+	Future<void> _selectDate(BuildContext context) async { // method to build a date picker
 		final DateTime picked = await showDatePicker(
 				context: context,
-				initialDate: _date,
-				firstDate: DateTime.now(),
+				initialDate: _selectedDate,
+				firstDate: DateTime.now().subtract(Duration(days: 1)),
 				lastDate: new DateTime(2022)
 		);
-		if (picked != null) {
-			print("Date Selected ${_date.toString()}");
+		if (picked != null && picked != _selectedDate) {
 			setState(() {
-				_date = new DateTime(picked.year, picked.month, picked.day, _time.hour, _time.minute); // date selected stored in a priv variable.
+				_selectedDate = picked;
 			});
 		}
 	}
 
-	Future<Null> _selectTime(BuildContext context) async { // method to build time picker
+	Future<void> _selectTime(BuildContext context) async { // method to build time picker
 		final TimeOfDay picked = await showTimePicker(
 				context: context,
-				initialTime: _time
+				initialTime: _selectedTime,
 		);
-		if (picked != null) {
-			print("Date Selected ${_time.toString()}");
-			print("${_time.hour} + ${_time.minute}");
+		if (picked != null && picked != _selectedTime) {
 			setState(() {
-				_time = picked;
-				_date = new DateTime(_date.year, _date.month, _date.day, _time.hour, _time.minute); // time selected stored in a priv variable.
+				_selectedTime = picked;
 			});
 		}
 	}
@@ -72,14 +87,21 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 
 	void validateAndSubmit() async { // method to send new task to the server.
 		if (validateAndSave()) { // only if data valid
-			Todo todo = new Todo(widget.auth.liveUser.uid, _title, _desc, _date.toString(), _priority, "errands"); // create an instance of the task class to hold user input.
-			print(todo.title); 
-			todo.pushToServer(); // send the task to server to be stored in the database.
-			widget.auth.liveUser.update(todo); // update the current state of the app to reflect the changes happening server-side.
-			Navigator.pop( // Go back to the homepage.
-				context,
-				MaterialPageRoute(builder: (context) => HomePage(auth: widget.auth)),
-			); 
+			await _getTaskPrediction(_title);
+			Todo todo = new Todo(widget.auth.liveUser.uid, _title, _desc, dateFormatter.format(DateTime(_selectedDate.year, _selectedDate.month, _selectedDate.day, _selectedTime.hour, _selectedTime.minute)), _priority, _category); // create an instance of the task class to hold user input.
+			await todo.pushToServer(() {
+				  widget.auth.currentUser().then((String res) {
+						  Navigator.pushAndRemoveUntil(
+								  context,
+								  MaterialPageRoute(
+										  builder: (context) => HomePage(auth: widget.auth)
+								  ),
+								  (_) => false
+
+						  );
+
+				  });
+			}); // update the current state of the app to reflect the changes happening server-side.
 		}
 	}
 
@@ -105,17 +127,20 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 					mainAxisAlignment: MainAxisAlignment.center, 
 					children: <Widget>[ 
 						new FlatButton(child: new Text("Due Date", style: new TextStyle(color: Colors.white)), onPressed: () {
+							print(_selectedTime.hour + _selectedTime.periodOffset);
 							_selectDate(context);
-						}, color: Colors.redAccent, shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 55),),
+						}, color: Colors.redAccent, shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 20),),
 						new Container(
 							padding: EdgeInsets.all(5),
 						),
 						new FlatButton(child: new Text("Due Time", style: new TextStyle(color: Colors.white),), onPressed: () {
-							_selectTime(context);
-						}, color: Colors.green, shape: StadiumBorder() ,padding: EdgeInsets.symmetric(horizontal: 55),),
+							_selectTime(context); print(_selectedTime.period);
+						}, color: Colors.green, shape: StadiumBorder() ,padding: EdgeInsets.symmetric(horizontal: 20),),
 			])),
 			new Container(padding: EdgeInsets.all(10)),
-			new Text("Due ${dateFormatter.format(_date)}", textAlign: TextAlign.center, textScaleFactor: 1.4, style: TextStyle(fontWeight: FontWeight.bold),), // show user the date and time they entered.
+			new Text("Due ${timeago.format(DateTime(_selectedDate.year, _selectedDate.month, _selectedDate.day, _selectedTime.hour, _selectedTime.minute), allowFromNow: true)}", textAlign: TextAlign.center, textScaleFactor: 1.4, style: TextStyle(fontWeight: FontWeight.bold),), // show user the date and time they entered.
+			new Container(padding: EdgeInsets.only(bottom: 6),),
+			new Text(dateFormatter.format(DateTime(_selectedDate.year, _selectedDate.month, _selectedDate.day, _selectedTime.hour, _selectedTime.minute)), textScaleFactor: 1, textAlign: TextAlign.center,),
 			new Container(padding: EdgeInsets.all(10)),
 			new Row(
 				mainAxisAlignment: MainAxisAlignment.center,
@@ -162,8 +187,7 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 					padding: EdgeInsets.all(16.0),
 						child: new Form(
 								key: formKey, // use the generated form key
-								child: new Column(
-									crossAxisAlignment: CrossAxisAlignment.stretch,
+								child: new ListView(
 									children: buildInputs(), // use the buildInputs method to build the inputs.
 								)
 						)

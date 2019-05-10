@@ -1,35 +1,34 @@
 // this file includes 'helper' methods that speed up processes, in addition it holds methods that allow interactions with the server.
-
-import "package:http/http.dart" as http;
-import "dart:convert";
 import "package:dio/dio.dart";
 import "package:intl/intl.dart";
 import 'dart:math';
 
+
 Dio dio = new Dio();
 
-DateFormat dateFormatter = new DateFormat("hh:mm dd/MM/y"); // create a date formatter, which will accept dates as strings and push out date types.
+DateFormat dateFormatter = new DateFormat("HH:mm MMM d, yyyy"); // create a date formatter, which will accept dates as strings and push out date types.
 
 const String API_BASE = "https://todo.sammyhass.io/api"; // string constant which holds the route that the api should be requested to.
 
-Future<String> newTodo(uid, title, desc, date, cat, priority) async { // function to create a new task.
-  Response res;
+Future<String> newTodo(uid, title, desc, date, priority, category) async { // function to create a new task.
+
   String randomIdDec = Random().nextInt(1000000000).toRadixString(16); // generates random ID for the current task by creating a random hex number.
 
-  res = await dio.post("$API_BASE/todo",data:{"uid": uid,"todoId": randomIdDec, "title": title, "desc": desc, "date": date, "category": cat, "priority": priority}); // send a post request to the server to create the task.
+  await dio.post("$API_BASE/todo",data:{"uid": uid,"todoId": randomIdDec, "title": title, "desc": desc, "date": date, "category": category, "priority": priority}); // send a post request to the server to create the task.
 
   return randomIdDec; // return task id.
 }
 
 Future<Map> deleteTodo(uid, todoId, cat) async { // delete task function
   Response res;
-  res = await dio.delete("$API_BASE/todo", data: {"uid": uid, "todoId": todoId, "cat": cat}); // send delete request to the server a task
+  print("$uid $todoId $cat");
+  res = await dio.delete("$API_BASE/todo?uid=$uid&todoId=$todoId&category=$cat"); // send delete request to the server a task
   return res.data;
 }
 
 Future<Null> editTodo(uid, todoId, title, description, date, priority) async { // edit task function
   Response res;
-  res = await dio.put("$API_BASE/todo", data: {"uid": uid, "todoId": todoId}); // send a put (edit) request to server to edit a task.
+  res = await dio.put("$API_BASE/todo/", data: {"uid": uid, "todoId": todoId}); // send a put (edit) request to server to edit a task.
   // (Not yet active as edit task not yet implemented)
 
 }
@@ -64,9 +63,9 @@ class Todo {
     this.category = category;
   }
 
-  void pushToServer() { // method to push a task to the server.
-    newTodo(this.uid, this.title, this.description, this.date, this.category, this.priority).then((res) { // push task to the server.
-      this.id = res;
+  Future<Todo> pushToServer(Function after) { // method to push a task to the server.
+    return newTodo(this.uid, this.title, this.description, this.date, this.priority, this.category).then((res) { // push task to the server.
+      return after();
     });
   }
 }

@@ -24,57 +24,51 @@ class _ViewTodoPageState extends State<ViewTodoPage> { // create a state for the
 
 
 	Widget build(BuildContext context) { // build the UI of this page.
-		var thisTodo = widget.auth.liveUser.lists[widget.todoCat].singleWhere((todo) => todo["id"] == widget.todoId); // locate the todo within the user object
+		var thisTodo = widget.auth.liveUser.lists[widget.todoCat].singleWhere((todo) => todo["uid"] == widget.todoId); // locate the todo within the user object
 		List<Widget> getContents() { // method to generate the widgets with data about the task.
 			var formatter = new DateFormat("dd/mm/yyyy hh:mm");
 			List<MaterialColor> iconColors = [Colors.green, Colors.amber, Colors.red];
 			var priorityIconColour = iconColors[thisTodo["priority"]];
 			if (pageState == 0) { // if in edit mode.
 				return [ // create the widgets to show task.
-					new Row(
-						children: [
-							new Icon(
-								Icons.priority_high,
-								color: priorityIconColour,
-							), // shows the priority of this task as either green, amber or red (low -  high priority)
-							new Text(
-									thisTodo["title"],
+							new Center(child: new Column(children: <Widget>[
+								new Text(
+								thisTodo["title"],
+									textAlign: TextAlign.center,
 									textScaleFactor: 2,
-									style: new TextStyle(fontWeight: FontWeight.bold),
-							), // shows the title of the task.
-						]
-					),
-					new Container(
-						padding: EdgeInsets.symmetric(vertical: 5), // adds some vertical space.
-					),
-					new Row( // shows the description of the task
-							children: [
-								new Text(
-									thisTodo["description"],
-								),
-							]
-					),
-					new Container( // make some vertical space between description and the due date.
-						padding: EdgeInsets.symmetric(vertical: 5),
-					),
-					new Row(
-							children: [ // show due date and time
-								new Text(
-									"Due ${thisTodo["date"]}",
-									style: new TextStyle(fontWeight: FontWeight.bold),
-								),
-							]
-					),
-					new Row(
-							children: [
-								new RaisedButton(onPressed: () { //create a button that deletes the task.
-									setState(() {
-									  pageState = 1; // refresh page and change to 'delete task mode' - this way else block below will be called.
-									});
-								}, child: Text("Delete This Task"))
-							]
-					)
-				];
+								), // shows the title of the task
+
+							new Container(
+								padding: EdgeInsets.symmetric(vertical: 5), // adds some vertical space.
+							),
+							new Row( // shows the description of the task
+									children: [
+										new Text(
+											thisTodo["description"],
+										),
+									]
+							),
+							new Container( // make some vertical space between description and the due date.
+								padding: EdgeInsets.symmetric(vertical: 5),
+							),
+							new Row(
+									children: [ // show due date and time
+										new Text(
+											"Due ${thisTodo["date"]}",
+											style: new TextStyle(fontWeight: FontWeight.bold),
+										),
+									]
+							),
+							new Row(
+									children: [
+										new RaisedButton(onPressed: () { //create a button that deletes the task.
+											setState(() {
+												pageState = 1; // refresh page and change to 'delete task mode' - this way else block below will be called.
+											});
+										}, child: Text("Delete This Task"))
+									]
+							)]
+			))];
 			} else { // if in delete task mode. i.e. user pressed delete button.
 				print(thisTodo);
 				return [
@@ -85,6 +79,7 @@ class _ViewTodoPageState extends State<ViewTodoPage> { // create a state for the
 								RaisedButton( // confirm deletion button
 									child: Text("Delete"),
 									onPressed: () async {
+										print(widget.todoCat);
 										helper.deleteTodo(widget.auth.liveUser.uid, thisTodo["id"], widget.todoCat);
 										widget.auth.liveUser.lists[widget.todoCat].removeWhere((todo) => todo["id"] == thisTodo["id"]);
 										Navigator.pop(

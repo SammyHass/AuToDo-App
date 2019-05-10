@@ -27,6 +27,7 @@ class _RootPageState extends State<RootPage> { // Create a state that the RootPa
 	@override
 	void initState() {
     super.initState();
+
     widget.auth.currentUser().then((userId) {
     	setState(() { // check if there is a user session active, if there is, log them in and refresh the page to send them to homepage.
     	  authStatus = userId == null ? AuthStatus.notSignedIn : AuthStatus.signedIn;

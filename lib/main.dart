@@ -2,6 +2,7 @@
 import "package:flutter/material.dart";
 import "auth.dart";
 import "root_page.dart";
+
 void main() {  // runs when app is opened from user's home screen.
   runApp(new MyApp()); // build the app
 }
