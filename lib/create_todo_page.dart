@@ -7,6 +7,7 @@ import "home_page.dart";
 import "helper.dart";
 import 'package:flutter/services.dart';
 import 'package:timeago/timeago.dart' as timeago;
+import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
 
 
 // Creates Page as a Stateful Widget in order so that it can adapt to the users actions
@@ -48,7 +49,10 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 			_priority = value;
 		});
 	}
+
+	bool _alert = false;
 	Future<void> _selectDate(BuildContext context) async { // method to build a date picker
+		_alert = true;
 		final DateTime picked = await showDatePicker(
 				context: context,
 				initialDate: _selectedDate,
@@ -57,7 +61,7 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 		);
 		if (picked != null && picked != _selectedDate) {
 			setState(() {
-				_selectedDate = picked;
+					_selectedDate = picked;
 			});
 		}
 	}
@@ -69,7 +73,7 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 		);
 		if (picked != null && picked != _selectedTime) {
 			setState(() {
-				_selectedTime = picked;
+					_selectedTime = picked;
 			});
 		}
 	}
@@ -84,6 +88,7 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 
 		}
 	}
+
 
 	void validateAndSubmit() async { // method to send new task to the server.
 		if (validateAndSave()) { // only if data valid
@@ -107,74 +112,84 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 
 
 
-	List<Widget> buildInputs() { // method to build scaffolding for inputs.
-		return [
-			new TextFormField( // create input for title of task
+Form buildInputs() { // method to build scaffolding for inputs.
+		return new Form(
+			key: formKey, // use the generated form key
+			child: new ListView(
+				children: [			new TextFormField( // create input for title of task
 					decoration: new InputDecoration(labelText: "Title", icon: new Icon(Icons.title)),
 					validator: (value) => value.length < 3 ? "Title must be longer than three characters": null,
+
 					onSaved: (value) => _title = value,
-			),
-			new TextFormField( // create multiline input for description of task
+				),
+				Container(padding: EdgeInsets.symmetric(vertical: 4, horizontal: 0)),
+				new TextFormField( // create  multiline input for description of task
+					maxLines: null,
 					keyboardType: TextInputType.multiline,
-					decoration: new InputDecoration(labelText: "Description", icon: Icon(Icons.description)),
+					maxLengthEnforced: true,
+					decoration: new InputDecoration(hintText: "Description", icon: Icon(Icons.description)),
 					onSaved: (value) => _desc = value,
-			),
-			new Container( // blank space
-				padding: EdgeInsets.all(10),
-			),
-			new Container( // create date and time inputs.
-				child: new Row(crossAxisAlignment: CrossAxisAlignment.start,
-					mainAxisAlignment: MainAxisAlignment.center, 
-					children: <Widget>[ 
-						new FlatButton(child: new Text("Due Date", style: new TextStyle(color: Colors.white)), onPressed: () {
-							print(_selectedTime.hour + _selectedTime.periodOffset);
-							_selectDate(context);
-						}, color: Colors.redAccent, shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 20),),
+
+				),
+				new Container( // blank space
+					padding: EdgeInsets.all(10),
+				),
+				new Container( // create date and time inputs.
+					child: new Row(crossAxisAlignment: CrossAxisAlignment.start,
+						mainAxisAlignment: MainAxisAlignment.center,
+						children: <Widget>[
+							new FlatButton(child: new Text("Due Date", style: new TextStyle(color: Colors.white)), onPressed: () {
+								print(_selectedTime.hour + _selectedTime.periodOffset);
+								_selectDate(context);
+							}, color: Colors.redAccent, shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 20),),
+							new Container(
+								padding: EdgeInsets.all(5),
+							),
+							new FlatButton(child: new Text("Due Time", style: new TextStyle(color: Colors.white),), onPressed: () {
+								_selectTime(context); print(_selectedTime.period);
+							}, color: Colors.green, shape: StadiumBorder() ,padding: EdgeInsets.symmetric(horizontal: 20),),
+						])),
+				new Container(padding: EdgeInsets.all(10)),
+				new Text("Due ${timeago.format(DateTime(_selectedDate.year, _selectedDate.month, _selectedDate.day, _selectedTime.hour, _selectedTime.minute), allowFromNow: true)}", textAlign: TextAlign.center, textScaleFactor: 1.4, style: TextStyle(fontWeight: FontWeight.bold)), // show user the date and time they entered.
+				new Container(padding: EdgeInsets.only(bottom: 6),),
+				new Text(dateFormatter.format(DateTime(_selectedDate.year, _selectedDate.month, _selectedDate.day, _selectedTime.hour, _selectedTime.minute)), textScaleFactor: 1, textAlign: TextAlign.center,),
+				new Container(padding: EdgeInsets.all(10)),
+				new Row(
+					mainAxisAlignment: MainAxisAlignment.center,
+					children: <Widget>[ // create radio buttons and label for priority input.
 						new Container(
-							padding: EdgeInsets.all(5),
+							child: new Text("Priority", textScaleFactor: 1.4, style: TextStyle(fontWeight: FontWeight.bold),),
+							padding: const EdgeInsets.symmetric(vertical: 20),
 						),
-						new FlatButton(child: new Text("Due Time", style: new TextStyle(color: Colors.white),), onPressed: () {
-							_selectTime(context); print(_selectedTime.period);
-						}, color: Colors.green, shape: StadiumBorder() ,padding: EdgeInsets.symmetric(horizontal: 20),),
-			])),
-			new Container(padding: EdgeInsets.all(10)),
-			new Text("Due ${timeago.format(DateTime(_selectedDate.year, _selectedDate.month, _selectedDate.day, _selectedTime.hour, _selectedTime.minute), allowFromNow: true)}", textAlign: TextAlign.center, textScaleFactor: 1.4, style: TextStyle(fontWeight: FontWeight.bold),), // show user the date and time they entered.
-			new Container(padding: EdgeInsets.only(bottom: 6),),
-			new Text(dateFormatter.format(DateTime(_selectedDate.year, _selectedDate.month, _selectedDate.day, _selectedTime.hour, _selectedTime.minute)), textScaleFactor: 1, textAlign: TextAlign.center,),
-			new Container(padding: EdgeInsets.all(10)),
-			new Row(
-				mainAxisAlignment: MainAxisAlignment.center,
-				children: <Widget>[ // create radio buttons and label for priority input.
-					new Container(
-						child: new Text("Priority", textScaleFactor: 1.4, style: TextStyle(fontWeight: FontWeight.bold),),
-						padding: const EdgeInsets.symmetric(vertical: 20),
-					),
-					// radio button for low priority (green)
-					new Radio(
-						value: 0,
-						groupValue: _priority,
-						onChanged: _handleRadioValueChange,
-						activeColor: Colors.green,
-					),
-					// radio button for medium priority (amber)
-					new Radio(
-						value: 1,
-						groupValue: _priority,
-						onChanged: _handleRadioValueChange,
-						activeColor: Colors.amber,
-					),
-					// radio button for high priority (red)
-					new Radio(
-						value: 2,
-						groupValue: _priority,
-						onChanged: _handleRadioValueChange,
-						activeColor: Colors.redAccent,
-					)
-				],
-			),
-			// submit button to validate inputs and then submit them to the server.
-			new RaisedButton(onPressed: validateAndSubmit, color: Colors.blueAccent, shape: StadiumBorder(), child: Text("Go!", style: new TextStyle(color: Colors.white)))
-		];
+						// radio button for low priority (green)
+						new Radio(
+							value: 0,
+							groupValue: _priority,
+							onChanged: _handleRadioValueChange,
+							activeColor: Colors.green,
+						),
+						// radio button for medium priority (amber)
+						new Radio(
+							value: 1,
+							groupValue: _priority,
+							onChanged: _handleRadioValueChange,
+							activeColor: Colors.amber,
+						),
+						// radio button for high priority (red)
+						new Radio(
+							value: 2,
+							groupValue: _priority,
+							onChanged: _handleRadioValueChange,
+							activeColor: Colors.redAccent,
+						)
+					],
+				),
+				// submit button to validate inputs and then submit them to the server.
+				new RaisedButton(onPressed: validateAndSubmit, color: Colors.blueAccent, shape: StadiumBorder(), child: Text("Go!", style: new TextStyle(color: Colors.white)))
+				], // use the buildInputs method to build the inputs.
+			)
+		);
+
 	}
 	final formKey = new GlobalKey<FormState>(); // create a form key so that inputs can be collected.
 	@override
@@ -185,12 +200,7 @@ class _CreateTodoPageState extends State<CreateTodoPage> { // declares a state o
 				),
 				body: new Container( // build the inputs
 					padding: EdgeInsets.all(16.0),
-						child: new Form(
-								key: formKey, // use the generated form key
-								child: new ListView(
-									children: buildInputs(), // use the buildInputs method to build the inputs.
-								)
-						)
+						child: buildInputs()
 				)
 		);
 	}

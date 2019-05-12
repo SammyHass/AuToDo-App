@@ -7,6 +7,7 @@ import "auth.dart";
 import "home_page.dart";
 import 'package:intl/intl.dart';
 import "helper.dart" as helper;
+import 'package:flutter/cupertino.dart';
 
 class ViewTodoPage extends StatefulWidget { // create a stateful widget so that the view todo page can adapt to any task the user has.
 	final BaseAuth auth;
@@ -24,7 +25,7 @@ class _ViewTodoPageState extends State<ViewTodoPage> { // create a state for the
 
 
 	Widget build(BuildContext context) { // build the UI of this page.
-		var thisTodo = widget.auth.liveUser.lists[widget.todoCat].singleWhere((todo) => todo["uid"] == widget.todoId); // locate the todo within the user object
+		var thisTodo = widget.auth.liveUser.lists[widget.todoCat].singleWhere((todo) => todo["id"] == widget.todoId); // locate the todo within the user object
 		List<Widget> getContents() { // method to generate the widgets with data about the task.
 			var formatter = new DateFormat("dd/mm/yyyy hh:mm");
 			List<MaterialColor> iconColors = [Colors.green, Colors.amber, Colors.red];
@@ -61,10 +62,17 @@ class _ViewTodoPageState extends State<ViewTodoPage> { // create a state for the
 							),
 							new Row(
 									children: [
-										new RaisedButton(onPressed: () { //create a button that deletes the task.
-											setState(() {
-												pageState = 1; // refresh page and change to 'delete task mode' - this way else block below will be called.
+										new CupertinoButton(onPressed: () { //create a button that deletes the task.
+												setState(() {
+													Navigator.pop(
+														context,
+														MaterialPageRoute(builder: (context) => HomePage(auth: widget.auth)),
+
+													); // on press, this button deletes this task from the server and redirects the user back to the home page.
+												// remove the task
 											});
+												helper.deleteTodo(widget.auth.liveUser.uid, thisTodo["id"], widget.todoCat);
+												widget.auth.liveUser.lists[widget.todoCat].removeWhere((todo) => todo["id"] == thisTodo["id"]);
 										}, child: Text("Delete This Task"))
 									]
 							)]
@@ -76,8 +84,8 @@ class _ViewTodoPageState extends State<ViewTodoPage> { // create a state for the
 						child: Column(
 							children: <Widget>[
 								Text("Delete the task '${thisTodo["title"]}'?"), // show text asking if task should be deleted.
-								RaisedButton( // confirm deletion button
-									child: Text("Delete"),
+								CupertinoButton( // confirm deletion button
+									child: Text("Mark Done"),
 									onPressed: () async {
 										print(widget.todoCat);
 										helper.deleteTodo(widget.auth.liveUser.uid, thisTodo["id"], widget.todoCat);
@@ -89,11 +97,6 @@ class _ViewTodoPageState extends State<ViewTodoPage> { // create a state for the
 									},
 									color: Colors.red,
 								),
-								RaisedButton(
-									onPressed: () {setState(() {pageState = 0;});},
-									child: Text("Go Back"),
-									color: Colors.green,
-								), // Go back button if the user did not mean to delete the task.
 							],
 						),
 					)
@@ -103,15 +106,13 @@ class _ViewTodoPageState extends State<ViewTodoPage> { // create a state for the
 		}
 		return new Scaffold(
 			appBar: new AppBar( // create title bar for the page.
-				title: new Text("Viewing Todo", textAlign: TextAlign.left),
+				title: new Text("Task", textAlign: TextAlign.left),
 			),
 			body: new Container( 
 			padding: EdgeInsets.all(16.0),
-				child: new SingleChildScrollView( // create a scrolable view in case the description of the task requires scrolling.
-					child: new Column(
+				child: new ListView(
 						children: getContents() // run getContents to build the widgets for this page using the uid of the task.
 					)
-				)
 			),
 		);
 	}

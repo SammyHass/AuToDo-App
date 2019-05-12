@@ -11,6 +11,7 @@ class User { // create user class which will act as a temporary place to keep da
 
 		void update(helper.Todo todo, Function  after) { // create update method, to add a task to the user object.
 			lists[todo.category].add({ // add task to a particular list selected with NLP
+				"uid": todo.uid,
 				"title": todo.title,
 				"description": todo.description,
 				"date": todo.date,

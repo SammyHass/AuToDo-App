@@ -5,6 +5,8 @@ import "helper.dart" as helper;
 import "create_todo_page.dart";
 import "view_todo_page.dart";
 import 'package:timeago/timeago.dart' as timeago;
+import 'package:rounded_modal/rounded_modal.dart';
+
 
 
 class HomePage extends StatefulWidget { // create stateful widget for home page. This is so that all new tasks can be stored.
@@ -31,7 +33,9 @@ class Task implements ListItem {
 		final int  priority;
 		final String category;
 		String till;
-		Task(this.title, this.till, this.id, this.priority, this.category);
+		DateTime date;
+		String description;
+		Task(this.title, this.till, this.id, this.priority, this.category, this.date, this.description);
 	}
 	class _HomePageState extends State<HomePage> { // The initial state for this page.
 		dynamic getTasks() { // method to get and show all tasks.
@@ -39,33 +43,45 @@ class Task implements ListItem {
 			if (lists == null) {
 				lists = Map();
 			}
-			List<ListItem> items = []; // List for all widgets to build
+			List<Task> items = []; // List for all widgets to build
 			lists.forEach((category, list) {
-				items.add(Category(category)); // Making the category into a widget
 				list.forEach((item) {
-					items.add(Task(item["title"], timeago.format(helper.dateFormatter.parse(item["date"]), allowFromNow: true), item["uid"], item["priority"], category));
+					items.add(Task(item["title"], timeago.format(helper.dateFormatter.parse(item["date"]), allowFromNow: true), item["id"], item["priority"], category, helper.dateFormatter.parse(item["date"]), item["description"]));
+					print(item["date"]);
 				});
-
 			});
+			items.sort((a, b) => a.date.compareTo(b.date));
 
 
-
-			return new ListView.builder(
+			if (items.length == 0) {
+				return Center( child: Text("no tasks to show!", textScaleFactor: 1.3));
+			}
+			return ListView.builder(
 				// Let the ListView know how many items it needs to build
 				itemCount: items.length,
 				// Provide a builder function. This is where the magic happens! We'll
 				// convert each item into a Widget based on the type of item it is.
 				itemBuilder: (context, index) {
 					final item = items[index];
-					if (item is Category) {
-						return ListTile(
-							title: new Text(
-								item.category,
-								style: Theme.of(context).textTheme.headline,
-							),
-						);
-					} else if (item is Task) {
-						return Card(
+					if (item is Task) {
+						return Dismissible(
+								key: Key(item.id),
+								background: Container(color: Colors.green, alignment: AlignmentDirectional(0.2, 0.0), child: ListTile(trailing: Icon(Icons.done),)),
+								// We also need to provide a function that tells our app
+								// what to do after an item has been swiped away.
+								onDismissed: (direction) {
+									// Remove the item from our data source.
+									setState(() {
+										helper.deleteTodo(widget.auth.liveUser.uid, item.id, item.category);
+										widget.auth.liveUser.lists[item.category].removeWhere((todo) => todo["id"] == item.id);
+									});
+
+
+									// Then show a snackbar!
+									Scaffold.of(context).showSnackBar(SnackBar(content: Text("${item.title} was marked as done!")));
+								},
+								child: Card(
+									shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(25)), ),
 							child: ListTile(
 							title: Text(
 								item.title,
@@ -73,18 +89,37 @@ class Task implements ListItem {
 								subtitle: Text(
 										item.till
 								),
+								trailing: Text(item.category),
 								leading: Icon(
 									Icons.adjust,
 									color: [Colors.green, Colors.amber, Colors.red][item.priority],
 								),
 							onTap: () {
-								Navigator.push(context, MaterialPageRoute(
-										builder: (context) => ViewTodoPage(auth: widget.auth, todoCat: item.category, todoId: item.id)
-								));
+//								Navigator.push(context, MaterialPageRoute(
+//										builder: (context) => ViewTodoPage(auth: widget.auth, todoCat: item.category, todoId: item.id)
+//								));
+								return showRoundedModalBottomSheet(context: context, builder: (BuildContext context) {
+									return new Container(
+											child: Center(child:  ListView(
+												padding: EdgeInsets.all(10),
+												children: <Widget>[
+													Text(item.title, textAlign: TextAlign.center, textScaleFactor: 2, style: TextStyle(fontWeight: FontWeight.normal),),
+													Padding(padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),),
+													Text(helper.dateFormatter.format(item.date), textAlign: TextAlign.center,),
+													Padding(padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),),
+													Row(mainAxisAlignment: MainAxisAlignment.center ,children: [Text(item.category + " | ") , Icon(
+														Icons.adjust,
+														color: [Colors.green, Colors.amber, Colors.red][item.priority],
+													),]),
+													Container(margin: EdgeInsets.all(10), child: Text(item.description, textAlign: item.description.length > 40 ? TextAlign.left: TextAlign.center),),
+												],
+											)
+									));
+								});;
 							},
 
 						)
-						);}
+						));}
 				},
 			);
 
@@ -100,14 +135,37 @@ class Task implements ListItem {
 
 		@override
 		Widget build(BuildContext context) { // build the UI of page.
-			return new Scaffold(
+			return Scaffold(
 					appBar: new AppBar( // create top bar.
-						title: new Text("Welcome${widget.auth.liveUser.firstName != null ? " " + widget.auth.liveUser.firstName : ""}!", textAlign: TextAlign.left),
+						title: new Text("Todo", textAlign: TextAlign.left),
 						actions: <Widget>[
-							new RotatedBox(quarterTurns: 2, child: IconButton(onPressed: _signOut, icon: new Icon(Icons.exit_to_app)))
+							new RotatedBox(quarterTurns: 2, child: IconButton(icon: new Icon(Icons.exit_to_app), onPressed: () {
+								showDialog(context: context,
+									barrierDismissible: false,
+									builder: (BuildContext context) {
+										return new SimpleDialog(
+											title: new Text('Log Out?'),
+											children: <Widget>[
+												SimpleDialogOption(
+													child: new Text('Yes'),
+													onPressed: () {
+														Navigator.pop(context);
+														_signOut();
+													},
+												),
+												new SimpleDialogOption(
+													child: new Text('No'),
+													onPressed: () {
+														Navigator.pop(context);
+													},
+												)
+											],
+										);
+									});
+							} ))
 						],
 					),
-					body: new Container( // build body of page.
+					body: Container( // build body of page.
 						padding: EdgeInsets.all(16.0),
 								child: getTasks() // get all tasks from server
 						),

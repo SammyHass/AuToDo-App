@@ -4,7 +4,136 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="353877fc-e74f-4da3-a60a-d9b8cc886b3b" name="Default Changelist" comment="" />
+    <list default="true" id="353877fc-e74f-4da3-a60a-d9b8cc886b3b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Color-1.colorset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Color-2.colorset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Color-3.colorset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Color.colorset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Texture.textureset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/Texture.textureset/Universal.mipmapset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/aot/App.framework/App" beforeDir="false" afterPath="$PROJECT_DIR$/build/aot/App.framework/App" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/aot/app.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/aot/arm64/App.framework/App" beforeDir="false" afterPath="$PROJECT_DIR$/build/aot/arm64/App.framework/App" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/aot/arm64/snapshot.d.fingerprint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/aot/arm64/snapshot_assembly.S" beforeDir="false" afterPath="$PROJECT_DIR$/build/aot/arm64/snapshot_assembly.S" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/aot/arm64/snapshot_assembly.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/aot/arm64/snapshot_assembly.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/aot/kernel_compile.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/aot/kernel_compile.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/aot/kernel_compile.d.fingerprint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/dSYMs.noindex/App.framework.dSYM/Contents/Resources/DWARF/App" beforeDir="false" afterPath="$PROJECT_DIR$/build/dSYMs.noindex/App.framework.dSYM/Contents/Resources/DWARF/App" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/FirebaseAuth/FirebaseAuth.framework/FirebaseAuth" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/FirebaseAuth/FirebaseAuth.framework/FirebaseAuth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/FirebaseCore/FirebaseCore.framework/FirebaseCore" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/FirebaseCore/FirebaseCore.framework/FirebaseCore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/FirebaseDatabase" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/FirebaseDatabase" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/GTMSessionFetcher" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/GTMSessionFetcher" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/GoogleUtilities/GoogleUtilities.framework/GoogleUtilities" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/GoogleUtilities/GoogleUtilities.framework/GoogleUtilities" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app.dSYM/Contents/Resources/DWARF/Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app.dSYM/Contents/Resources/DWARF/Runner" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/AppIcon60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/AppIcon60x60@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/AppIcon76x76@2x~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/AppIcon76x76@2x~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Assets.car" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Assets.car" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/App.framework/App" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/App.framework/App" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/Flutter.framework/Flutter" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/Flutter.framework/Flutter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/GoogleUtilities.framework/GoogleUtilities" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/GoogleUtilities.framework/GoogleUtilities" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/leveldb.framework/leveldb" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/leveldb.framework/leveldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCore.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCore.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreAudio.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreAudio.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreFoundation.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreFoundation.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreGraphics.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreGraphics.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreImage.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreImage.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreMedia.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftCoreMedia.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftDarwin.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftDarwin.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftDispatch.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftDispatch.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftFoundation.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftFoundation.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftMetal.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftMetal.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftNaturalLanguage.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftNaturalLanguage.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftObjectiveC.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftObjectiveC.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftQuartzCore.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftQuartzCore.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftUIKit.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftUIKit.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftos.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/libswiftos.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/nanopb.framework/nanopb" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Frameworks/nanopb.framework/nanopb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/Runner" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/_CodeSignature/CodeResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/embedded.mobileprovision" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/embedded.mobileprovision" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/flutter_assets/FontManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/flutter_assets/FontManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/Runner.app/flutter_assets/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/firebase_auth/firebase_auth.framework/firebase_auth" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/firebase_auth/firebase_auth.framework/firebase_auth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/firebase_core/firebase_core.framework/firebase_core" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/firebase_core/firebase_core.framework/firebase_core" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/firebase_database/firebase_database.framework/firebase_database" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/firebase_database/firebase_database.framework/firebase_database" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/leveldb-library/leveldb.framework/leveldb" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/leveldb-library/leveldb.framework/leveldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/Release-iphoneos/nanopb/nanopb.framework/nanopb" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Release-iphoneos/nanopb/nanopb.framework/nanopb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/AppIcon60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/AppIcon60x60@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/AppIcon76x76@2x~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/AppIcon76x76@2x~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Assets.car" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Assets.car" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/App.framework/App" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/App.framework/App" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/Flutter.framework/Flutter" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/Flutter.framework/Flutter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/GoogleUtilities.framework/GoogleUtilities" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/GoogleUtilities.framework/GoogleUtilities" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/leveldb.framework/leveldb" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/leveldb.framework/leveldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCore.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCore.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreAudio.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreAudio.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreFoundation.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreFoundation.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreGraphics.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreGraphics.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreImage.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreImage.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreMedia.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftCoreMedia.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftDarwin.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftDarwin.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftDispatch.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftDispatch.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftFoundation.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftFoundation.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftMetal.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftMetal.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftNaturalLanguage.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftNaturalLanguage.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftObjectiveC.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftObjectiveC.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftQuartzCore.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftQuartzCore.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftUIKit.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftUIKit.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftos.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/libswiftos.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/nanopb.framework/nanopb" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Frameworks/nanopb.framework/nanopb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/Runner" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/_CodeSignature/CodeResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/embedded.mobileprovision" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/embedded.mobileprovision" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/flutter_assets/FontManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/flutter_assets/FontManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphoneos/Runner.app/flutter_assets/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ios/pod_inputs.fingerprint" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/pod_inputs.fingerprint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/snapshot_blob.bin.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/snapshot_blob.bin.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/snapshot_blob.bin.d.fingerprint" beforeDir="false" afterPath="$PROJECT_DIR$/build/snapshot_blob.bin.d.fingerprint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/App" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/App" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Flutter.framework/Flutter" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Flutter.framework/Flutter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_assets/FontManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_assets/FontManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_assets/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_auth/firebase_auth.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_auth/firebase_auth.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_core/firebase_core.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_core/firebase_core.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_database/firebase_database.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_database/firebase_database.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/sammyhass.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/sammyhass.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/create_todo_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/create_todo_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/view_todo_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/view_todo_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +163,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/root_page.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
+            <state relative-caret-position="840">
               <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
               <folding>
                 <element signature="e#260#299#0" expanded="true" />
@@ -46,8 +175,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+            <state relative-caret-position="216">
+              <caret line="113" column="168" selection-start-line="113" selection-start-column="168" selection-end-line="113" selection-end-column="168" />
               <folding>
                 <element signature="e#77#116#0" expanded="true" />
               </folding>
@@ -58,8 +187,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-247">
-              <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+            <state relative-caret-position="588">
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -67,8 +196,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/create_todo_page.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="90" column="176" selection-start-line="90" selection-start-column="176" selection-end-line="90" selection-end-column="176" />
+            <state relative-caret-position="4116">
+              <caret line="203" column="9" selection-start-line="203" selection-start-column="9" selection-end-line="203" selection-end-column="9" />
               <folding>
                 <element signature="e#130#169#0" expanded="true" />
               </folding>
@@ -77,12 +206,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/auth.dart">
+        <entry file="file://$PROJECT_DIR$/lib/login_page.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="2604">
+              <caret line="128" column="19" selection-start-line="128" selection-start-column="19" selection-end-line="128" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/view_todo_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1344">
+              <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#144#183#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,8 +229,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/helper.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            <state relative-caret-position="672">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#134#164#0" expanded="true" />
               </folding>
@@ -101,10 +239,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/auth.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="294">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="e#62#101#0" expanded="true" />
               </folding>
@@ -140,6 +290,7 @@
       <find>todoApp</find>
       <find>shopping</find>
       <find>format</find>
+      <find>new</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -165,11 +316,11 @@
         <option value="$PROJECT_DIR$/lib/login_page.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/root_page.dart" />
+        <option value="$PROJECT_DIR$/lib/helper.dart" />
         <option value="$PROJECT_DIR$/lib/auth.dart" />
+        <option value="$PROJECT_DIR$/lib/view_todo_page.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/create_todo_page.dart" />
-        <option value="$PROJECT_DIR$/lib/view_todo_page.dart" />
-        <option value="$PROJECT_DIR$/lib/helper.dart" />
         <option value="$PROJECT_DIR$/lib/home_page.dart" />
       </list>
     </option>
@@ -181,10 +332,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="532" />
-    <option name="y" value="24" />
-    <option name="width" value="1148" />
-    <option name="height" value="948" />
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="953" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -208,14 +358,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557468696339" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557642690712" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -225,7 +375,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -304,11 +454,13 @@
       <workItem from="1557436777822" duration="13728000" />
       <workItem from="1557468732941" duration="803000" />
       <workItem from="1557487517500" duration="1763000" />
+      <workItem from="1557594203430" duration="21702000" />
+      <workItem from="1557648796622" duration="914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134812000" />
+    <option name="totallyTimeSpent" value="157428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -320,10 +472,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="532" y="24" width="1148" height="948" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="953" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.44295302" visible="true" weight="0.12567812" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.44295302" visible="true" weight="0.08669109" />
       <window_info id="Structure" order="1" sideWeight="0.6" side_tool="true" weight="0.2053455" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -334,9 +485,9 @@
       <window_info id="Build Variants" order="8" side_tool="true" />
       <window_info id="Captures" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.498779" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6581197" weight="0.46785715" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5848596" weight="0.34761906" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.498779" weight="0.32821724" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6581197" visible="true" weight="0.46627218" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5848596" weight="0.34393403" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49674055" weight="0.32738096" />
@@ -347,13 +498,13 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4995759" weight="0.32851985" />
       <window_info anchor="bottom" id="Flutter Performance" order="13" sideWeight="0.41514042" side_tool="true" weight="0.34761906" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4993895" weight="0.32380953" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4993895" weight="0.32121924" />
       <window_info anchor="bottom" id="Android Profiler" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="16" sideWeight="0.4995759" weight="0.32972324" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24967405" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.30830282" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.01831502" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" x="46" y="955" width="1680" height="644" id="Flutter Inspector" order="5" sideWeight="0.4970344" type="FLOATING" weight="0.2887668" />
       <window_info anchor="right" id="Flutter Outline" order="6" sideWeight="0.49940687" weight="0.29399586" />
@@ -508,55 +659,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/login_page.dart">
+    <entry file="file://$USER_HOME$/development/flutter/bin/cache/dart-sdk/lib/collection/list.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1868">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="138">
+          <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view_todo_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/root_page.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="82" column="71" lean-forward="true" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
+        <state relative-caret-position="840">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
           <folding>
-            <element signature="e#0#4610#0" expanded="true" />
-            <element signature="e#144#183#0" expanded="true" />
+            <element signature="e#260#299#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+    <entry file="file://$USER_HOME$/development/flutter/packages/flutter/lib/src/widgets/routes.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#62#101#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="25662">
+          <caret line="1236" column="2" selection-start-line="1236" selection-start-column="2" selection-end-line="1236" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/create_todo_page.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="90" column="176" selection-start-line="90" selection-start-column="176" selection-end-line="90" selection-end-column="176" />
+        <state relative-caret-position="4116">
+          <caret line="203" column="9" selection-start-line="203" selection-start-column="9" selection-end-line="203" selection-end-column="9" />
           <folding>
             <element signature="e#130#169#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+    <entry file="file://$PROJECT_DIR$/lib/login_page.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-247">
-          <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+        <state relative-caret-position="2604">
+          <caret line="128" column="19" selection-start-line="128" selection-start-column="19" selection-end-line="128" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view_todo_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+          <folding>
+            <element signature="e#144#183#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/helper.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state relative-caret-position="672">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#134#164#0" expanded="true" />
           </folding>
@@ -565,28 +729,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/auth.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="252">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/root_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        <state relative-caret-position="294">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="e#260#299#0" expanded="true" />
+            <element signature="e#62#101#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        <state relative-caret-position="216">
+          <caret line="113" column="168" selection-start-line="113" selection-start-column="168" selection-end-line="113" selection-end-column="168" />
           <folding>
             <element signature="e#77#116#0" expanded="true" />
           </folding>
