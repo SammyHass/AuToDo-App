@@ -16,6 +16,7 @@ class CreateTodoPage extends StatelessWidget {
 		return Scaffold(
 			appBar: AppBar(
 				title: Text("Create Task"),
+				elevation: 0.0,
 			),
 			body: new Container(width: MediaQuery.of(context).size.width, padding: EdgeInsets.all(16.0),child: FormKeyboardActions(
 				child: TaskForm(auth: this.auth),

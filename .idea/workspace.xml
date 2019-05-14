@@ -5,66 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="353877fc-e74f-4da3-a60a-d9b8cc886b3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_auth-14AWVXWTDJ1XS.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_auth-14AWVXWTDJ1XS.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_auth-19SUIPD5QRIMH.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_auth-19SUIPD5QRIMH.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_core-3HSQ1DEFBI8IB.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_core-3HSQ1DEFBI8IB.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_core-OW9VFQSDCV2H.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_core-OW9VFQSDCV2H.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_database-37D1ZXKC52655.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_database-37D1ZXKC52655.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_database-3VJYGJ2TSY785.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/firebase_database-3VJYGJ2TSY785.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/12IY1O0E28EO1/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/13FAUN03LMZQT/FirebaseCore-2ANZK7H01H88S.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/13FAUN03LMZQT/FirebaseCore-2ANZK7H01H88S.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/13FAUN03LMZQT/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/13FAUN03LMZQT/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1DPSUIZVTT2ZQ/GoogleUtilities-XSYOE34575QF.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1DPSUIZVTT2ZQ/GoogleUtilities-XSYOE34575QF.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1DPSUIZVTT2ZQ/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1DPSUIZVTT2ZQ/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1K4IW136K9452/FirebaseCore-2ANZK7H01H88S.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1K4IW136K9452/FirebaseCore-2ANZK7H01H88S.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1K4IW136K9452/GTMSessionFetcher-2UGDT2YBRK4PU.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1K4IW136K9452/GTMSessionFetcher-2UGDT2YBRK4PU.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1K4IW136K9452/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/1K4IW136K9452/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/26ZTQVZ5YKKHW/GoogleUtilities-XSYOE34575QF.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/26ZTQVZ5YKKHW/GoogleUtilities-XSYOE34575QF.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/26ZTQVZ5YKKHW/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/26ZTQVZ5YKKHW/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/28QD8EOWRGPS2/FirebaseCore-2ANZK7H01H88S.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/28QD8EOWRGPS2/FirebaseCore-2ANZK7H01H88S.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/28QD8EOWRGPS2/GTMSessionFetcher-2UGDT2YBRK4PU.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/28QD8EOWRGPS2/GTMSessionFetcher-2UGDT2YBRK4PU.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/28QD8EOWRGPS2/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/28QD8EOWRGPS2/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/2KQV6M0YQCQH2/FirebaseAuth-29YO55UBJMO0H.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/2KQV6M0YQCQH2/FirebaseAuth-29YO55UBJMO0H.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/2KQV6M0YQCQH2/FirebaseCore-2ANZK7H01H88S.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/2KQV6M0YQCQH2/FirebaseCore-2ANZK7H01H88S.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/2KQV6M0YQCQH2/FirebaseDatabase-2NWL5KYJ9HMRL.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/2KQV6M0YQCQH2/FirebaseDatabase-2NWL5KYJ9HMRL.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/2KQV6M0YQCQH2/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/2KQV6M0YQCQH2/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3KZ0JOJUQZZWP/firebase_auth-14AWVXWTDJ1XS.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3KZ0JOJUQZZWP/firebase_auth-14AWVXWTDJ1XS.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3KZ0JOJUQZZWP/firebase_core-OW9VFQSDCV2H.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3KZ0JOJUQZZWP/firebase_core-OW9VFQSDCV2H.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3KZ0JOJUQZZWP/firebase_database-37D1ZXKC52655.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3KZ0JOJUQZZWP/firebase_database-37D1ZXKC52655.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3KZ0JOJUQZZWP/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3KZ0JOJUQZZWP/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3N8Q0HMF5UPAB/FirebaseCore-2ANZK7H01H88S.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3N8Q0HMF5UPAB/FirebaseCore-2ANZK7H01H88S.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3N8Q0HMF5UPAB/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/3N8Q0HMF5UPAB/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/VTNFA662SPUD/FirebaseAuth-29YO55UBJMO0H.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/VTNFA662SPUD/FirebaseAuth-29YO55UBJMO0H.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/VTNFA662SPUD/FirebaseCore-2ANZK7H01H88S.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/VTNFA662SPUD/FirebaseCore-2ANZK7H01H88S.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/VTNFA662SPUD/FirebaseDatabase-2NWL5KYJ9HMRL.pcm" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/VTNFA662SPUD/FirebaseDatabase-2NWL5KYJ9HMRL.pcm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/VTNFA662SPUD/modules.idx" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/ModuleCache.noindex/VTNFA662SPUD/modules.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/Runner/Index/DataStore/v5/units/GeneratedPluginRegistrant.o-3M1N4K7FNIUUS" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/Runner/Index/DataStore/v5/units/GeneratedPluginRegistrant.o-3M1N4K7FNIUUS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/Runner/Index/DataStore/v5/units/firebase_auth-14AWVXWTDJ1XS.pcm-2ZE4VQJ1U6I1D" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/Runner/Index/DataStore/v5/units/firebase_auth-14AWVXWTDJ1XS.pcm-2ZE4VQJ1U6I1D" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/Runner/Index/DataStore/v5/units/firebase_core-OW9VFQSDCV2H.pcm-2AH3NFIH9ZY7W" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/Runner/Index/DataStore/v5/units/firebase_core-OW9VFQSDCV2H.pcm-2AH3NFIH9ZY7W" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/Runner/Index/DataStore/v5/units/firebase_database-37D1ZXKC52655.pcm-A6SAOU4GFQ3I" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/Runner/Index/DataStore/v5/units/firebase_database-37D1ZXKC52655.pcm-A6SAOU4GFQ3I" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/Runner/Logs/Issues/LogStoreManifest.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/Runner/Logs/Issues/LogStoreManifest.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/DerivedData/Runner/info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/DerivedData/Runner/info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/App" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/App" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/isolate_snapshot_data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/kernel_blob.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/vm_snapshot_data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Flutter.framework/Flutter" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Flutter.framework/Flutter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Manifest.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_auth/firebase_auth.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_auth/firebase_auth.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_core/firebase_core.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_core/firebase_core.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_database/firebase_database.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/firebase_database/firebase_database.xcconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/sammyhass.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/sammyhass.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/create_todo_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/create_todo_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/login_page.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/create_todo_page.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2032">
-              <caret line="193" column="32" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
+            <state relative-caret-position="320">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
                 <element signature="e#130#169#0" expanded="true" />
               </folding>
@@ -113,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1176">
@@ -125,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+            <state relative-caret-position="1428">
+              <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
               <folding>
                 <element signature="e#77#116#0" expanded="true" />
               </folding>
@@ -137,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/login_page.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
+            <state relative-caret-position="228">
+              <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
               <folding>
                 <element signature="e#0#8916#0" expanded="true" />
                 <element signature="e#201#240#0" expanded="true" />
@@ -254,10 +200,10 @@
         <option value="$PROJECT_DIR$/.packages" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/lib/home_page.dart" />
         <option value="$PROJECT_DIR$/lib/login_page.dart" />
         <option value="$PROJECT_DIR$/lib/create_todo_page.dart" />
-        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -268,8 +214,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="453" />
-    <option name="y" value="704" />
+    <option name="x" value="428" />
+    <option name="y" value="23" />
     <option name="width" value="1178" />
     <option name="height" value="950" />
   </component>
@@ -297,7 +243,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557793533970" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557794431894" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -405,12 +351,12 @@
       <workItem from="1557648796622" duration="7318000" />
       <workItem from="1557743557824" duration="349000" />
       <workItem from="1557743929306" duration="14192000" />
-      <workItem from="1557769062368" duration="14329000" />
+      <workItem from="1557769062368" duration="15541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192702000" />
+    <option name="totallyTimeSpent" value="193914000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,10 +368,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1178" height="950" extended-state="0" />
+    <frame x="428" y="23" width="1178" height="950" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.44295302" visible="true" weight="0.12764084" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.44295302" visible="true" weight="0.12764084" />
       <window_info id="Structure" order="1" sideWeight="0.6" side_tool="true" weight="0.2053455" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -437,7 +383,7 @@
       <window_info id="Captures" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.498779" weight="0.32821724" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5628816" visible="true" weight="0.4418052" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5628816" visible="true" weight="0.4418052" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5821206" weight="0.3776722" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -704,6 +650,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-331">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/helper.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -716,8 +676,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/login_page.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="146" column="10" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
+        <state relative-caret-position="228">
+          <caret line="154" column="23" selection-start-line="154" selection-start-column="23" selection-end-line="154" selection-end-column="23" />
           <folding>
             <element signature="e#0#8916#0" expanded="true" />
             <element signature="e#201#240#0" expanded="true" />
@@ -727,35 +687,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/home_page.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+        <state relative-caret-position="1428">
+          <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
           <folding>
             <element signature="e#77#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-331">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/create_todo_page.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2032">
-          <caret line="193" column="32" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
+        <state relative-caret-position="320">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
             <element signature="e#130#169#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
         </state>
       </provider>
     </entry>

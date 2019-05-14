@@ -67,7 +67,7 @@ class Task implements ListItem {
 			items.sort((a, b) => a.date.compareTo(b.date));
 
 			if (items.isEmpty) {
-				return LiquidPullToRefresh(child: ListView(children: <Widget>[ListTile(title: Text("No Tasks", textScaleFactor: 1.5), subtitle: Text("Add a task to get started."))]), onRefresh: () async{
+				return LiquidPullToRefresh(showChildOpacityTransition: true, child: ListView(children: <Widget>[ListTile(title: Text("No Tasks", textScaleFactor: 1.5), subtitle: Text("Add a task to get started."))]), onRefresh: () async{
 					await widget.auth.currentUser(); // update list
 					items = [];
 					setState(() {
@@ -83,7 +83,7 @@ class Task implements ListItem {
 
 				});
 			}, child:
-				ListView.builder(
+				ListView.builder(padding: EdgeInsets.all(16),
 				// Let the ListView know how many items it needs to build
 				itemCount: items.length,
 				// Provide a builder function. This is where the magic happens! We'll
@@ -132,6 +132,9 @@ class Task implements ListItem {
 										return showRoundedModalBottomSheet(
 											context: context, builder: (BuildContext context) {
 											return new Center(
+												child: Container(
+													padding: EdgeInsets.all(16),
+
 												child: Column(
 													children: <Widget>[
 														Text(item.title, textAlign: TextAlign.center,
@@ -157,8 +160,8 @@ class Task implements ListItem {
 																	: TextAlign.center),),
 													],
 												)
-											);
-										});
+											));
+											});
 									})
 							)
 						);
@@ -182,6 +185,7 @@ class Task implements ListItem {
 			// build the UI of page.
 			return Scaffold(
 				appBar: new AppBar( // create top bar.
+					elevation: 0.0,
 					title: new Text("Todo", textAlign: TextAlign.left),
 					actions: <Widget>[
 						new RotatedBox(quarterTurns: 2,
@@ -213,7 +217,6 @@ class Task implements ListItem {
 					],
 				),
 				body: Container( // build body of page.
-					padding: EdgeInsets.all(16.0),
 					child: getTasks() // get all tasks from server
 				),
 

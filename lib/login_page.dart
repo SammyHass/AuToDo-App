@@ -151,7 +151,8 @@ class _LoginPageState extends State<LoginPage> { // create the initial State for
     return new Scaffold( // build page using methods declared above
       key: _scaffoldKey,
       appBar: new AppBar(
-        title: new Text("Todo")
+        title: new Text("Todo"),
+        elevation: 0.0,
       ),
       body: new Container( // create the body of the page.
           padding: EdgeInsets.all(16.0),
