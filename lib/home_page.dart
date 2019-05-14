@@ -6,6 +6,8 @@ import "create_todo_page.dart";
 import "view_todo_page.dart";
 import 'package:timeago/timeago.dart' as timeago;
 import 'package:rounded_modal/rounded_modal.dart';
+import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
+
 
 
 
@@ -37,26 +39,51 @@ class Task implements ListItem {
 		String description;
 		Task(this.title, this.till, this.id, this.priority, this.category, this.date, this.description);
 	}
-	class _HomePageState extends State<HomePage> { // The initial state for this page.
-		dynamic getTasks() { // method to get and show all tasks.
-			Map lists = widget.auth.liveUser.lists; // get the lists from the user object.
+
+	class _HomePageState extends State<HomePage> {
+		// The initial state for this page.
+		dynamic getTasks() {
+			// method to get and show all tasks.
+			Map lists = widget.auth.liveUser
+				.lists; // get the lists from the user object.
 			if (lists == null) {
 				lists = Map();
 			}
 			List<Task> items = []; // List for all widgets to build
 			lists.forEach((category, list) {
 				list.forEach((item) {
-					items.add(Task(item["title"], timeago.format(helper.dateFormatter.parse(item["date"]), allowFromNow: true), item["id"], item["priority"], category, helper.dateFormatter.parse(item["date"]), item["description"]));
+					items.add(Task(
+						item["title"],
+						timeago.format(
+							helper.dateFormatter.parse(item["date"]), allowFromNow: true),
+						item["id"],
+						item["priority"],
+						category,
+						helper.dateFormatter.parse(item["date"]),
+						item["description"]));
 					print(item["date"]);
 				});
 			});
 			items.sort((a, b) => a.date.compareTo(b.date));
 
-
-			if (items.length == 0) {
-				return Center( child: Text("no tasks to show!", textScaleFactor: 1.3));
+			if (items.isEmpty) {
+				return LiquidPullToRefresh(child: ListView(children: <Widget>[ListTile(title: Text("No Tasks", textScaleFactor: 1.5), subtitle: Text("Add a task to get started."))]), onRefresh: () async{
+					await widget.auth.currentUser(); // update list
+					items = [];
+					setState(() {
+						getTasks();
+					});
+				});
 			}
-			return ListView.builder(
+			return LiquidPullToRefresh(onRefresh: () async {
+				await widget.auth.currentUser(); // update list
+				items = [];
+				setState(() {
+					getTasks();
+
+				});
+			}, child:
+				ListView.builder(
 				// Let the ListView know how many items it needs to build
 				itemCount: items.length,
 				// Provide a builder function. This is where the magic happens! We'll
@@ -65,81 +92,101 @@ class Task implements ListItem {
 					final item = items[index];
 					if (item is Task) {
 						return Dismissible(
-								key: Key(item.id),
-								background: Container(color: Colors.green, alignment: AlignmentDirectional(0.2, 0.0), child: ListTile(trailing: Icon(Icons.done),)),
-								// We also need to provide a function that tells our app
-								// what to do after an item has been swiped away.
-								onDismissed: (direction) {
-									// Remove the item from our data source.
-									setState(() {
-										helper.deleteTodo(widget.auth.liveUser.uid, item.id, item.category);
-										widget.auth.liveUser.lists[item.category].removeWhere((todo) => todo["id"] == item.id);
-									});
+							key: Key(item.id),
+							background: Container(color: Colors.green,
+								alignment: AlignmentDirectional(0.2, 0.0),
+								child: ListTile(trailing: Icon(Icons.done),)),
+							// We also need to provide a function that tells our app
+							// what to do after an item has been swiped away.
+							onDismissed: (direction) {
+								// Remove the item from our data source.
+								setState(() {
+									helper.deleteTodo(
+										widget.auth.liveUser.uid, item.id, item.category);
+									 widget.auth.liveUser.lists[item.category].removeWhere((
+										todo) => todo["id"] == item.id);
+								});
 
 
-									// Then show a snackbar!
-									Scaffold.of(context).showSnackBar(SnackBar(content: Text("${item.title} was marked as done!")));
-								},
-								child: Card(
-									shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(25)), ),
-							child: ListTile(
-							title: Text(
-								item.title,
-							),
-								subtitle: Text(
-										item.till
-								),
-								trailing: Text(item.category),
-								leading: Icon(
-									Icons.adjust,
-									color: [Colors.green, Colors.amber, Colors.red][item.priority],
-								),
-							onTap: () {
-//								Navigator.push(context, MaterialPageRoute(
-//										builder: (context) => ViewTodoPage(auth: widget.auth, todoCat: item.category, todoId: item.id)
-//								));
-								return showRoundedModalBottomSheet(context: context, builder: (BuildContext context) {
-									return new Container(
-											child: Center(child:  ListView(
-												padding: EdgeInsets.all(10),
-												children: <Widget>[
-													Text(item.title, textAlign: TextAlign.center, textScaleFactor: 2, style: TextStyle(fontWeight: FontWeight.normal),),
-													Padding(padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),),
-													Text(helper.dateFormatter.format(item.date), textAlign: TextAlign.center,),
-													Padding(padding: EdgeInsets.symmetric(vertical: 10, horizontal: 0),),
-													Row(mainAxisAlignment: MainAxisAlignment.center ,children: [Text(item.category + " | ") , Icon(
-														Icons.adjust,
-														color: [Colors.green, Colors.amber, Colors.red][item.priority],
-													),]),
-													Container(margin: EdgeInsets.all(10), child: Text(item.description, textAlign: item.description.length > 40 ? TextAlign.left: TextAlign.center),),
-												],
-											)
-									));
-								});;
+								// Then show a snackbar!
+								Scaffold.of(context).showSnackBar(
+									SnackBar(content: Text("${item.title} was marked as done!")));
 							},
-
-						)
-						));}
-				},
+							child: Card(
+								shape: RoundedRectangleBorder(
+									borderRadius: BorderRadius.all(Radius.circular(25)),),
+								child: ListTile(
+									title: Text(
+										item.title,
+									),
+									subtitle: Text(
+										item.till
+									),
+									trailing: Text(item.category),
+									leading: Icon(
+										Icons.adjust,
+										color: [Colors.green, Colors.amber, Colors.red][item
+											.priority],
+									),
+									onTap: () {
+										return showRoundedModalBottomSheet(
+											context: context, builder: (BuildContext context) {
+											return new Center(
+												child: Column(
+													children: <Widget>[
+														Text(item.title, textAlign: TextAlign.center,
+															textScaleFactor: 2,
+															style: TextStyle(fontWeight: FontWeight.normal),),
+														Padding(padding: EdgeInsets.symmetric(
+															vertical: 10, horizontal: 0),),
+														Text(helper.dateFormatter.format(item.date),
+															textAlign: TextAlign.center,),
+														Padding(padding: EdgeInsets.symmetric(
+															vertical: 10, horizontal: 0),),
+														Row(mainAxisAlignment: MainAxisAlignment.center,
+															children: [Text(item.category + " | "), Icon(
+																Icons.adjust,
+																color: [Colors.green, Colors.amber, Colors.red
+																][item.priority],
+															),
+															]),
+														Container(margin: EdgeInsets.all(10),
+															child: Text(item.description,
+																textAlign: item.description.length > 40
+																	? TextAlign.left
+																	: TextAlign.center),),
+													],
+												)
+											);
+										});
+									})
+							)
+						);
+					};
+				})
 			);
-
 		}
-		void _signOut() async { // sign out method, attached to button.
+		void _signOut() async {
+			// sign out method, attached to button.
 			try {
 				await widget.auth.signOut();
-				widget.onSignedOut(); // user will be signed out and redirected to login page.
+				widget
+					.onSignedOut(); // user will be signed out and redirected to login page.
 			} catch (e) {
 				print(e);
 			}
 		}
 
 		@override
-		Widget build(BuildContext context) { // build the UI of page.
+		Widget build(BuildContext context) {
+			// build the UI of page.
 			return Scaffold(
-					appBar: new AppBar( // create top bar.
-						title: new Text("Todo", textAlign: TextAlign.left),
-						actions: <Widget>[
-							new RotatedBox(quarterTurns: 2, child: IconButton(icon: new Icon(Icons.exit_to_app), onPressed: () {
+				appBar: new AppBar( // create top bar.
+					title: new Text("Todo", textAlign: TextAlign.left),
+					actions: <Widget>[
+						new RotatedBox(quarterTurns: 2,
+							child: IconButton(
+								icon: new Icon(Icons.exit_to_app), onPressed: () {
 								showDialog(context: context,
 									barrierDismissible: false,
 									builder: (BuildContext context) {
@@ -162,25 +209,27 @@ class Task implements ListItem {
 											],
 										);
 									});
-							} ))
-						],
-					),
-					body: Container( // build body of page.
-						padding: EdgeInsets.all(16.0),
-								child: getTasks() // get all tasks from server
-						),
+							}))
+					],
+				),
+				body: Container( // build body of page.
+					padding: EdgeInsets.all(16.0),
+					child: getTasks() // get all tasks from server
+				),
 
 				floatingActionButton: FloatingActionButton( // create add task button.
-					onPressed: ()  {
+					onPressed: () {
 						Navigator.push(
 							context,
-							MaterialPageRoute(builder: (context) => CreateTodoPage(auth: widget.auth,)), // on pressed, send user to create task page.
+							MaterialPageRoute(builder: (context) =>
+								CreateTodoPage(auth: widget
+									.auth,)), // on pressed, send user to create task page.
 						);
 					},
 					tooltip: "Add Todo",
 					child: Icon(Icons.add),
 				),
-					floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+				floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
 			);
 		}
 	}

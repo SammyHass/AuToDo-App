@@ -1,5 +1,5 @@
 name: todo
-description: A new Flutter project.
+description: The todo app
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -7,16 +7,17 @@ description: A new Flutter project.
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
 # Read more about versioning at semver.org.
-version: 1.0.0+1
+version: 1.0.0+4
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: ">=2.2.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   http: ^0.12.0
   dio: ^1.0.13
+  liquid_pull_to_refresh: ^1.1.0
   firebase_auth: ^0.6.6
   firebase_database: ^1.0.5
   firebase_core: any
@@ -27,6 +28,7 @@ dependencies:
   timeago: ^2.0.14
   rounded_modal:
   flutter_cupertino_date_picker:
+  keyboard_actions: ^2.0.1
 
 
 
@@ -44,6 +46,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
