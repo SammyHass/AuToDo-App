@@ -186,6 +186,7 @@ class _TaskFormState extends State<TaskForm> {
 								decoration: new InputDecoration(alignLabelWithHint: true,
 							hintText: "Title", prefixIcon: new Icon(Icons.title), border: OutlineInputBorder()),
 								textInputAction: TextInputAction.next,
+								focusNode: _nodeText1,
 								onFieldSubmitted: (String value) {
 										FocusScope.of(context).requestFocus(_nodeText);
 								},
